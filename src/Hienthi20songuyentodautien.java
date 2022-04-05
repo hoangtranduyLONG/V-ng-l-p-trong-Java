@@ -1,34 +1,23 @@
 import java.util.Scanner;
 public class Hienthi20songuyentodautien {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap so: ");
-        int n = sc.nextInt();
-        int count = 0;
-        int N = 2 ;
-        String text = "";
-        while (count < n) {
-            if (N == 2) {
-                text = text + " " + N;
-                N++;
-                count++;
-            }
-            else {
-                int c = 0;
-                for (int i= 2; i < N; i++ ) {
-                    if (N%i == 0) {
-                        c++;
-                        N++;
+        public static void main (String[]args){
+            Scanner scanner = new Scanner(System.in);
+            String str = "Là SNT";
+            int count = 1;
+            int num = 2;
+            while (count <= 20) {
+                str = "Là SNT";
+                for (int i = 2; i < num; i++) {
+                    if (num % i == 0) {
+                        str = "Không phải số nguyên tố";
                         break;
                     }
                 }
-                if (c==0) {
-                    text = text + " " + N;
-                    N++;
+                if (str.equals("Là SNT")) {
+                    System.out.println(num);
                     count++;
                 }
+                num++;
             }
         }
-        System.out.println("Chuỗi số nguyên tố: " + text);
     }
-}
